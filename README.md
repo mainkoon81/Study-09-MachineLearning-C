@@ -66,7 +66,9 @@ What parameters(W,b) should they have on the edges(x1, x2) in order to model our
      - or we go back to the hidden layer and for the loser model, we have its boundary get closer to the point by updating (W,b), and for the winner model, we have its boundery move farther away from the point by updating (W,b).    
 <img src="https://user-images.githubusercontent.com/31917400/41565629-73289c8e-734f-11e8-8a7c-28ab563b0141.jpg" />
 
-
+ - Example
+<img src="https://user-images.githubusercontent.com/31917400/41567175-dc114618-7356-11e8-8454-d463b158f2f0.jpg" />
+ 
 
 
 

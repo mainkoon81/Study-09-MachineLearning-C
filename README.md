@@ -32,7 +32,7 @@ DeepLearning Intro
  - Multiclass Classification: If our neural network needs to model data with more than one output?
    - Simply add more nodes in the Output-layer!
    - We take the scores and apply the **softmax()** function to obtain well-defined probabilities.  
-<img src="https://user-images.githubusercontent.com/31917400/41475409-a2493d70-70b6-11e8-80b1-dc178c478fdf.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/41533886-49e55b1a-72f4-11e8-8313-12ec22f57952.jpg" />
 
 
 

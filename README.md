@@ -43,7 +43,7 @@ DeepLearning Intro
  - Error-Function(How badly each point is being classified? How far from the line?)
 <img src="https://user-images.githubusercontent.com/31917400/41541969-af95ec10-730b-11e8-9eda-194d5e58301a.jpg" />
 
-### Backpropagation
+### Train our NN - Backpropagation
  - 1. Doing a feedforward operation
  - 2. Comparing the output of the model with the desired output.
  - 3. Calculating the error.

@@ -58,7 +58,7 @@ What parameters(W,b) should they have on the edges(x1, x2) in order to model our
    - What the misclassified-point want: the **boundary** to come closer to it then, the boundary get closer to it by updating (W,b).
    - We continue doing this to minimize the error. 
 > Multi-layer Perceptron
- - The Error-Function is more complicated, thus we do Backpropagation:
+ - The Error-Function is more complicated, thus we do `Backpropagation`:
    - What the misclassified-point want: the **(+) region** to come closer to it then, 
      - when looking at the two linear models in the hidden-layer, we can see which one is doing better.
      - so we care the better linear model more than the other.

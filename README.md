@@ -35,16 +35,21 @@ DeepLearning Intro
 <img src="https://user-images.githubusercontent.com/31917400/41535449-446184f6-72fa-11e8-9b38-95b8439c72fa.jpg" />
 
 ### How do neural networks process the input to obtain an output? 
- - **Feedforward**: How to train the data?
-   - What parameters(W,b) should they have on the edges(x1, x2) in order to model our data well? 
-     - The perceptron(the simplist NN) here is defined by a linear model where W1 > W2.
-     - Then the perceptron plots the points(x1, x2) and outputs the odds that the point is positive.
+ - **Feedforward**: What parameters(W,b) should they have on the edges(x1, x2) in order to model our data well? 
+   - The perceptron(the simplist NN) here is defined by a linear model where W1 > W2.
+   - Then the perceptron plots the points(x1, x2) and outputs the odds that the point is positive.
 <img src="https://user-images.githubusercontent.com/31917400/41541346-1e378cac-730a-11e8-90e5-fe82148dbaf9.jpg" />
      
  - Error-Function(How badly each point is being classified? How far from the line?)
 <img src="https://user-images.githubusercontent.com/31917400/41541969-af95ec10-730b-11e8-9eda-194d5e58301a.jpg" />
 
-
+### Backpropagation
+ - 1. Doing a feedforward operation
+ - 2. Comparing the output of the model with the desired output.
+ - 3. Calculating the error.
+ - 4. Running the feedforward operation backwards (backpropagation) to spread the error to each of the weights.
+ - 5. Use this to update the weights, and get a better model.
+ - 6. Continue this until we have a model that is good.
 
 
 

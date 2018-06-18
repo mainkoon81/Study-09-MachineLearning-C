@@ -41,7 +41,8 @@ DeepLearning Intro
      - Then the perceptron plots the points(x1, x2) and outputs the odds that the point is positive.
 <img src="https://user-images.githubusercontent.com/31917400/41541346-1e378cac-730a-11e8-90e5-fe82148dbaf9.jpg" />
      
-
+ - Error-Function(How badly each point is being classified? How far from the line?)
+<img src="https://user-images.githubusercontent.com/31917400/41541969-af95ec10-730b-11e8-9eda-194d5e58301a.jpg" />
 
 
 

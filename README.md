@@ -8,7 +8,7 @@ DeepLearning Intro
 **How to Combine two linear models into a non-linear model?**: Each linear model is a whole probability space, which means for every points, it gives us **the probability of the point being 'positive'**. And we have two linear models, thus we get two probability values.  
  - Example01: We add up two probabilities, then pass into the Sigmoid function, which gives us the final probability value!
  - Example02: But what if we need to weight this sum? 
-   - We take a linear combination of the two linear models(thinking of the **new line** of between the two models)
+   - We take a **[LINEAR-COMBINATION]** of the two linear models(thinking of the **new line** of between the two models)
 <img src="https://user-images.githubusercontent.com/31917400/41471198-de1cd444-70aa-11e8-9908-cabaf9373110.jpg" />
 
 ### Neural Network(Multi-Layer Perceptrons) Architecture

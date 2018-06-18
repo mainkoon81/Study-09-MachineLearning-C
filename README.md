@@ -52,7 +52,19 @@ What parameters(W,b) should they have on the edges(x1, x2) in order to model our
  - 5. Use this to update the weights, and get a better model.
  - 6. Continue this until we have a model that is good.
 
-
+[GradientDescentAlgorithm & Backpropagation]
+> Single Perceptron
+ - We calculate the `Gradient` of the Error-Function E(W)
+   - What the misclassified-point want: the **boundary** to come closer to it then, the boundary get closer to it by updating (W,b).
+   - We continue doing this to minimize the error. 
+> Multi-layer Perceptron
+ - The Error-Function is more complicated, thus we do Backpropagation:
+   - What the misclassified-point want: the **(+) region** to come closer to it then, 
+     - when looking at the two linear models in the hidden-layer, we can see which one is doing better.
+     - so we care the better linear model more than the other.
+       - Reduce the `W` coming from the loser and increase the `W` coming from the winner.
+     - or we go back to the hidden layer and for the loser model, we have its boundary get closer to the point by updating (W,b), and for the winner model, we have its boundery move farther away from the point by updating (W,b).    
+<img src="https://user-images.githubusercontent.com/31917400/41565629-73289c8e-734f-11e8-8a7c-28ab563b0141.jpg" />
 
 
 

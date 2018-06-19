@@ -128,6 +128,7 @@ model.fit(X, y, epochs=1000, verbose=0)
 model.evaluate()
 ```
 
+------------------------------------------------------------------------------------------------------------------------------------
 ### Perceptron Example(logical operator)
  - Application example: Perceptron can be a logical operator: AND, OR, NOT, XOR...
    - Take two inputs then returns an output.

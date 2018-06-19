@@ -77,14 +77,14 @@ from keras.layers.core import Dense, Activation
 
 model = Sequential()
 ```
- - The `keras.models.Sequential` class is a wrapper for the neural network model that treats the network as a **sequence of layers**. 
- - It implements the Keras model interface with common methods like `compile()`, `fit()`, and `evaluate()` that are used to train and run the model. 
- - **Layers**: The `keras.layers` class provides a common interface for a variety of standard neural network layers: 
+ - **model**: The `keras.models.Sequential` class is a wrapper for the neural network model that treats the network as a **sequence of layers**. 
+   - It implements the Keras model interface with common methods like `compile()`, `fit()`, and `evaluate()` that are used to train and run the model. 
+ - **layers**: The `keras.layers` class provides a common interface for a variety of standard neural network layers: 
    - fully connected layers
    - max pool layers
-   - activation layers, and more. 
+   - activation layers, etc. 
    - We can add a layer to a model using the model's `add()` method.
-   - Keras requires the **input shape** to be specified in the **first layer**, then it will automatically infer the shape of all other layers. This means we only have to explicitly set the input dimensions for the first layer.
+   - Keras requires the **input shape** to be specified in the **first layer**, then it will automatically infer the shape of all other layers. This means we only have to explicitly set the **input dimensions** for the first layer.
 
 For example, a simple model with a single hidden layer might look like this:
  - X has shape (num_rows, num_cols), where the training data are stored as row vectors. 
@@ -97,18 +97,16 @@ y = np.array([[0], [0], [0], [1]], dtype=np.float32)
 # 1st Layer - Add an input layer of 32 nodes with the same input shape as the training samples in X
 model.add(Dense(32, input_dim=X.shape[1]))
 
-# Add a softmax activation layer
+# Add an activation layer
 model.add(Activation('softmax'))
 
 # 2nd Layer - Add a fully connected output layer
 model.add(Dense(1))
 
-# Add a sigmoid activation layer
+# Add an activation layer
 model.add(Activation('sigmoid'))
 ```
-The first(hidden) layer `model.add(Dense(32, input_dim=X.shape[1]))`: creates **32 nodes** which each expect to receive 2-element vectors(shape[1] is two columns) as inputs. 
-
-Each layer takes the outputs from the previous layer as inputs and pipes through to the next layer. This chain of passing output to the next layer continues until the last layer, which is the output of the model. We can see that the output has dimension 1.
+The first(hidden) layer `model.add(Dense(32, input_dim=X.shape[1]))`: creates **32 nodes** which each expect to receive 2-element vectors(shape[1]:two columns) as inputs. Each layer takes the outputs from the previous layer as inputs and pipes through to the next layer. This chain of passing output to the next layer continues until the last layer, which is the output of the model. We can see that the output has dimension 1.
 
 The **activation layers** are equivalent to specifying an activation function in the Dense layers. For example, `model.add(Dense(128)); model.add(Activation('softmax'))` is computationally equivalent to `model.add(Dense(128, activation="softmax"))`, but it is common to explicitly separate the **activation layers** because it allows direct access to the outputs of each layer before the activation is applied (which is useful in some model architectures).
 
@@ -182,10 +180,16 @@ weight2 = -2.0
 bias = 1.0
 ```
 4) **XOR** Multi-Layer Perceptron(cross-OR ?)
- - [**What if it's impossible to build the decision surface ?**]
-   - Combine perceptions: "the output of one = the input of another one"...'Neural Network'
+ - [**What if it's impossible to build the linear decision surface ?**]
+   - Combine perceptrons: "the output of one = the input of another one"...'Neural Network'
+   - This is a simple multi-layer feedforward neural network.
 <img src="https://user-images.githubusercontent.com/31917400/39961747-d552235e-5634-11e8-99ce-aed8a2aae548.jpg" />
 
+ - Set the first layer to a `Dense()` layer with an output width of 8 nodes and the `input_dim` set to the size of the training samples (in this case 2).
+ - Add a `tanh` activation function.
+ - Set the output layer width to 1, since the output has only two classes. (We can use 0 for one class an 1 for the other)
+ - Use a `sigmoid` activation function after the output layer.
+ - Run the model for 50 epochs.
 
 
 

@@ -80,7 +80,8 @@ model = Sequential()
    - fully connected layers
    - max pool layers
    - activation layers, and more. 
-   - We can add a layer to a model using the model's `add()` method. 
+   - We can add a layer to a model using the model's `add()` method.
+   - Keras requires the **input shape** to be specified in the **first layer**, then it will automatically infer the shape of all other layers. This means we only have to explicitly set the input dimensions for the first layer.
 
 For example, a simple model with a single hidden layer might look like this:
  - X has shape (num_rows, num_cols), where the training data are stored as row vectors. 
@@ -109,7 +110,9 @@ model.add(Dense(1))
 # Add a sigmoid activation layer
 model.add(Activation('sigmoid'))
 ```
+The first(hidden) layer `model.add(Dense(32, input_dim=X.shape[1]))`: creates **32 nodes** which each expect to receive 2-element vectors(shape[1] is two columns) as inputs. 
 
+Each layer takes the outputs from the previous layer as inputs and pipes through to the next layer. This chain of passing output to the next layer continues until the last layer, which is the output of the model. We can see that the output has dimension 1.
 
 
 

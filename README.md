@@ -199,9 +199,9 @@ np.random.seed(42)
 
 # Our data
 X = np.array([[0,0],[0,1],[1,0],[1,1]]).astype('float32')
-y = np.array([[0],[1],[1],[0]]).astype('float32') ###this is a multi-class????!!!!
+y = np.array([[0],[1],[1],[0]]).astype('float32') 
 
-# One-hot encoding the output
+# One-hot encoding the output: convert class vectors to binary class matrices
 y = np_utils.to_categorical(y)
 
 # Initial Setup for Keras
@@ -231,6 +231,10 @@ print("\nAccuracy: ", score[-1])
 print("\nPredictions:")
 print(xor.predict_proba(X))
 ```
+<img src="https://user-images.githubusercontent.com/31917400/41629008-fbb38972-741e-11e8-8a5f-37b05ce27895.jpg" />
+
+It gives Accuracy:0.75. Out of 4 input points, we're correctly classifying only 3 of them? Let's try to change some parameters around to improve. For example, you can increase the number of epochs. Can we reach 100% ? 
+
 ### Example_02. (Student Admissions)
 
 

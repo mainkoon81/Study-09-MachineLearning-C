@@ -106,7 +106,7 @@ model.add(Dense(1))
 # Add an activation layer
 model.add(Activation('sigmoid'))
 ```
-The first(hidden) layer `model.add(Dense(32, input_dim=X.shape[1]))`: creates **32 nodes** which each expect to receive 2-element vectors(shape[1]:two columns) as inputs. Each layer takes the outputs from the previous layer as inputs and pipes through to the next layer. This chain of passing output to the next layer continues until the last layer, which is the output of the model. We can see that the output has dimension 1.
+The first(hidden) layer `model.add(Dense(32, input_dim=X.shape[1]))`: creates **32 nodes**(or 32 models) which each expect to receive 2-element vectors(shape[1]:two columns) as inputs. Each layer takes the outputs from the previous layer as inputs and pipes through to the next layer. This chain of passing output to the next layer continues until the last layer, which is the output of the model. We can see that the output has dimension 1.
 
 The **activation layers** are equivalent to specifying an activation function in the Dense layers. For example, `model.add(Dense(128)); model.add(Activation('softmax'))` is computationally equivalent to `model.add(Dense(128, activation="softmax"))`, but it is common to explicitly separate the **activation layers** because it allows direct access to the outputs of each layer before the activation is applied (which is useful in some model architectures).
 
@@ -123,7 +123,7 @@ model.evaluate()
 ```
 
 ------------------------------------------------------------------------------------------------------------------------------------
-### Perceptron Example(logical operator)
+### Example_01. (logical operator)
  - Application example: Perceptron can be a logical operator: AND, OR, NOT, XOR...
    - Take two inputs then returns an output.
  - Interestingly, perceptron can classify the data that is not linearly separable. 
@@ -190,6 +190,49 @@ bias = 1.0
  - Set the output layer width to 1, since the output has only two classes. (We can use 0 for one class an 1 for the other)
  - Use a `sigmoid` activation function after the output layer.
  - Run the model for 50 epochs.
+```
+import numpy as np
+from keras.utils import np_utils
+import tensorflow as tf
+np.random.seed(42)
+
+
+# Our data
+X = np.array([[0,0],[0,1],[1,0],[1,1]]).astype('float32')
+y = np.array([[0],[1],[1],[0]]).astype('float32') ###this is a multi-class????!!!!
+
+# One-hot encoding the output
+y = np_utils.to_categorical(y)
+
+# Initial Setup for Keras
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Flatten
+
+# Building the model
+xor = Sequential()
+xor.add(Dense(32, input_dim=2))
+xor.add(Activation("sigmoid"))
+xor.add(Dense(2))
+xor.add(Activation("sigmoid"))
+xor.compile(loss="categorical_crossentropy", optimizer="adam", metrics = ['accuracy'])
+
+# print the model architecture
+xor.summary()
+
+
+# Fitting the model
+history = xor.fit(X, y, nb_epoch=50, verbose=0)
+
+# Scoring the model
+score = xor.evaluate(X, y)
+print("\nAccuracy: ", score[-1])
+
+# Checking the predictions
+print("\nPredictions:")
+print(xor.predict_proba(X))
+```
+### Example_02. (Student Admissions)
+
 
 
 

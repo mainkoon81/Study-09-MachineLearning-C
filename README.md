@@ -124,8 +124,9 @@ model.evaluate()
 
 ------------------------------------------------------------------------------------------------------------------------------------
 ### Example_01. (logical operator)
- - Application example: Perceptron can be a logical operator: AND(intersection SET), OR(union SET), NOT, XOR(difference SET)
+ - Perceptron can be a logical operator: AND(intersection SET), OR(union SET), XOR(difference SET), NOT
    - Take two inputs then returns an output.
+   - Modify the parameters(W,b)
  - When our data is not linearly separable. Multi-layer NN can classify them.
 <img src="https://user-images.githubusercontent.com/31917400/39961806-b1513700-5635-11e8-9edf-f3cde879577c.jpg" />
 
@@ -185,8 +186,7 @@ bias = 1.0
    - This is a simple multi-layer feedforward neural network.
 <img src="https://user-images.githubusercontent.com/31917400/39961747-d552235e-5634-11e8-99ce-aed8a2aae548.jpg" />
 
- - Set the first layer to a `Dense()` layer with an output width of 8 nodes and the `input_dim` set to the size of the training samples (in this case 2).
- - Add a `tanh` activation function.
+ - Set the first layer to a `Dense()` layer with an output width of(8 -> 32)nodes and the `input_dim` set to the size of the training samples (in this case, `input_dim=2`).
  - Set the output layer width to 1, since the output has only two classes. (We can use 0 for one class an 1 for the other)
  - Use a `sigmoid` activation function after the output layer.
  - Run the model for 50 epochs.
@@ -210,7 +210,7 @@ from keras.layers.core import Dense, Activation, Flatten
 
 # Building the model
 xor = Sequential()
-xor.add(Dense(32, input_dim=2))
+xor.add(Dense(8, input_dim=2))
 xor.add(Activation("sigmoid"))
 xor.add(Dense(2))
 xor.add(Activation("sigmoid"))
@@ -233,7 +233,7 @@ print(xor.predict_proba(X))
 ```
 <img src="https://user-images.githubusercontent.com/31917400/41629008-fbb38972-741e-11e8-8a5f-37b05ce27895.jpg" />
 
-It gives Accuracy:0.75. Out of 4 input points, we're correctly classifying only 3 of them? Let's try to change some parameters around to improve. For example, you can increase the number of epochs. Can we reach 100% ? 
+It gives Accuracy:0.50 -> 0.75. Out of 4 input points, we're correctly classifying only 3 of them? Let's try to change some parameters around to improve. For example, you can increase the number of epochs, nodes ?? Can we reach 100% ? 
 
 ### Example_02. (Student Admissions)
 

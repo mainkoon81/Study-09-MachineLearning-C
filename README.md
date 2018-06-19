@@ -69,12 +69,46 @@ What parameters(W,b) should they have on the edges(x1, x2) in order to model our
  - Example
 <img src="https://user-images.githubusercontent.com/31917400/41567175-dc114618-7356-11e8-8454-d463b158f2f0.jpg" />
  
+### Building a Neural Network in Keras
+```
+from keras.models import Sequential
+model = Sequential()
+```
+ - The `keras.models.Sequential` class is a wrapper for the neural network model that treats the network as a **sequence of layers**. 
+ - It implements the Keras model interface with common methods like `compile()`, `fit()`, and `evaluate()` that are used to train and run the model. 
+ - **Layers**: The `keras.layers` class provides a common interface for a variety of standard neural network layers: 
+   - fully connected layers
+   - max pool layers
+   - activation layers, and more. 
+   - We can add a layer to a model using the model's `add()` method. 
+
+For example, a simple model with a single hidden layer might look like this:
+ - X has shape (num_rows, num_cols), where the training data are stored as row vectors. 
+ - y must have an output vector for each input vector. 
+```
+import numpy as np
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+
+X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=np.float32)
+y = np.array([[0], [0], [0], [1]], dtype=np.float32)
 
 
+# Create the Sequential model
+model = Sequential()
 
+# 1st Layer - Add an input layer of 32 nodes with the same input shape as the training samples in X
+model.add(Dense(32, input_dim=X.shape[1]))
 
+# Add a softmax activation layer
+model.add(Activation('softmax'))
 
+# 2nd Layer - Add a fully connected output layer
+model.add(Dense(1))
 
+# Add a sigmoid activation layer
+model.add(Activation('sigmoid'))
+```
 
 
 

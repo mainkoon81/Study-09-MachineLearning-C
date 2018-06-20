@@ -252,10 +252,10 @@ there are so many things that can fail...
 <img src="https://user-images.githubusercontent.com/31917400/41677116-598adbfe-74bf-11e8-97bc-b32323bbf4a6.jpg" />
 
 ### 2. Regularization Method
-> **choose L1**: In case we want "Sparce vector"(the smaller weights tend to go to **'Zero'**), and if we want to reduce the No.of weights and end up with a small set....
+**choose L1**: In case we want "Sparce vector"(the smaller weights tend to go to **'Zero'**), and if we want to reduce the No.of weights and end up with a small set....
  - Sometimes we have a problem with hundreds of features, and **L1** helps us select which features are important.**It will turn the rest into zeros**.
  
-> **choose L2**: If we want to maintain all the weights homogeneously small....and want smaller Error..
+**choose L2**: If we want to maintain all the weights homogeneously small....and want smaller Error..
  - This normally gives better results for training models, so we people use the most. 
 <img src="https://user-images.githubusercontent.com/31917400/41679187-4c1035b8-74c5-11e8-87be-68daca43e4fa.jpg" />
 

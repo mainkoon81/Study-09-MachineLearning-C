@@ -187,8 +187,8 @@ bias = 1.0
    - This is a simple multi-layer feedforward neural network.
 <img src="https://user-images.githubusercontent.com/31917400/39961747-d552235e-5634-11e8-99ce-aed8a2aae548.jpg" />
 
- - Set the first layer to a `Dense()` layer with an output width of(8 -> 32)nodes and the `input_dim` set to the size of the training samples (in this case, `input_dim=2`).
- - Set the output layer width to 1, since the output has only two classes. (We can use 0 for one class an 1 for the other)
+ - Set the first layer to a `Dense()` layer with an output width of `8 to 32` nodes and the `input_dim` set to the size of the training samples (in this case, `input_dim=2`).
+ - Set the output layer width to `1` nodes???, since the output has only two classes. (We can use 0 for one class an 1 for the other)
  - Use a `sigmoid` activation function after the output layer.
  - Run the model for 50 epochs.
 ```

@@ -130,7 +130,7 @@ model.evaluate()
  - When our data is not linearly separable. Multi-layer NN can classify them.
 <img src="https://user-images.githubusercontent.com/31917400/39961806-b1513700-5635-11e8-9edf-f3cde879577c.jpg" />
 
-What's the **Weight1**? **Weight2**? **bias**?
+**weight1**? **weight2**? **bias**?
 ```
 import pandas as pd
 

@@ -234,7 +234,7 @@ print(xor.predict_proba(X))
 ```
 <img src="https://user-images.githubusercontent.com/31917400/41629008-fbb38972-741e-11e8-8a5f-37b05ce27895.jpg" />
 
-It gives Accuracy:0.50 -> 0.75. Out of 4 input points, we're correctly classifying only 3 of them? Let's try to change some parameters around to improve. For example, you can increase the number of epochs, nodes ?? Can we reach 100% ? 
+The final prediction(matrix) tells the probability of each data point! The `xor.evaluate(X, y)` gives Accuracy:0.50 -> 0.75, which means out of 4 input points, we're correctly classifying only 3 of them. Let's try to change some parameters around to improve. For example, you can increase the number of epochs, nodes ?? Can we reach 100% ? 
 
 ### Example_02. (Student Admissions)
 

@@ -249,10 +249,10 @@ there are so many things that can fail...
  - noisy data?
  - model-running time?
 
-### 1. Overfitting: Early Stopping Method
+### 1. `Overfitting`: Early Stopping Method
 <img src="https://user-images.githubusercontent.com/31917400/41677116-598adbfe-74bf-11e8-97bc-b32323bbf4a6.jpg" />
 
-### 2. Overfitting: Regularization Method
+### 2. `Overfitting`: Regularization Method
 **choose L1**: 
  - In case we want "Sparce vector"(the smaller weights tend to go to **'Zero'**), and if we want to reduce the No.of weights and end up with a small set....
  - Sometimes we have a problem with hundreds of features, and **L1** helps us select which features are important.**It will turn the rest into zeros**.
@@ -262,7 +262,7 @@ there are so many things that can fail...
  - This normally gives better results for training models, so we people use the most. 
 <img src="https://user-images.githubusercontent.com/31917400/41679187-4c1035b8-74c5-11e8-87be-68daca43e4fa.jpg" />
 
-### 3. Unbalanced Edges: Dropout Method
+### 3. `Unbalanced Edges`: Dropout Method
 When we train neural network, sometimes one part of the network has very large weights and it ends up dominating all the training. To solve this, we turn the dominating input off and let the rest train. More thoroughly, we go through the epochs, we randomly turn off some nodes(hey, you shall not pass through here). In that case, the other nodes have to pick up the slack and take more part in the training. On average, each node will get the same treatment.         
 <img src="https://user-images.githubusercontent.com/31917400/41683180-d338bc02-74d1-11e8-93cf-91952b38d947.jpg" />
 
@@ -271,11 +271,11 @@ When we train neural network, sometimes one part of the network has very large w
 <img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
 
-### 5. Long running time: Batch & Stochastic Gradient-Descent
+### 5. `Long running time`: Batch & Stochastic Gradient-Descent
 > Problem of long running time
 <img src="https://user-images.githubusercontent.com/31917400/41688294-76fb9876-74e3-11e8-90ef-e279f67bea14.jpg" />
 
-Well...we don't need to plug in all our data every time we take a step. We only use a random subset of our data. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.  
+Well...we don't need to plug in all our data every time we take a step. **We only use a bunch of random subsets of our data**. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.  
 
 ### 6. 
 

@@ -275,7 +275,9 @@ When we train neural network, sometimes one part of the network has very large w
 > Problem of long running time
 <img src="https://user-images.githubusercontent.com/31917400/41688294-76fb9876-74e3-11e8-90ef-e279f67bea14.jpg" />
 
+Well...we don't need to plug in all our data every time we take a step. We only use a random subset of our data. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.  
 
+### 6. 
 
 
 

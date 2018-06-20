@@ -78,7 +78,7 @@ from keras.layers.core import Dense, Activation
 model = Sequential()
 ```
  - **model**: The `keras.models.Sequential` class is a wrapper for the neural network model that treats the network as a **sequence of layers**. 
-   - It implements the Keras model interface with common methods like `compile()`, `fit()`, and `evaluate()` that are used to train and run the model. 
+   - It implements the Keras model interface with common methods like `.compile()`, `.fit()`, and `.evaluate()` that are used to train and run the model. 
  - **layers**: The `keras.layers` class provides a common interface for a variety of standard neural network layers: 
    - fully connected layers
    - max pool layers

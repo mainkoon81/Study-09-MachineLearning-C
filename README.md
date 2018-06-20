@@ -242,16 +242,16 @@ The final prediction(matrix) tells the probability of each data point! The `xor.
 
 
 
-### Training Optimization
+## Training Optimization
 there are so many things that can fail...
  - poorly chosen architecture?
  - noisy data?
  - model-running time?
 
-1. Early Stopping Method
+### 1. Early Stopping Method
 <img src="https://user-images.githubusercontent.com/31917400/41677116-598adbfe-74bf-11e8-97bc-b32323bbf4a6.jpg" />
 
-2. Regularization Method
+### 2. Regularization Method
 **choose L1**: In case we want "Sparce vector"(the smaller weights tend to go to **'Zero'**), and if we want to reduce the No.of weights and end up with a small set....
  - Sometimes we have a problem with hundreds of features, and **L1** helps us select which features are important.**It will turn the rest into zeros**. 
 **choose L2**: If we want to maintain all the weights homogeneously small....and want smaller Error..

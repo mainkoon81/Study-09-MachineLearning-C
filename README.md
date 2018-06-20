@@ -272,7 +272,7 @@ When we train neural network, sometimes one part of the network has very large w
 ### 4. Other Activation Function
 <img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
 
-
+### 5. Long running time: Batch & Stochastic Gradient-Descent
 
 
 

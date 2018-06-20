@@ -242,8 +242,9 @@ The final prediction(matrix) tells the probability of each data point! The `xor.
 
 
 
-## Training Optimization
+## [Training Optimization]
 there are so many things that can fail...
+ - overfitting?
  - poorly chosen architecture?
  - noisy data?
  - model-running time?
@@ -252,15 +253,18 @@ there are so many things that can fail...
 <img src="https://user-images.githubusercontent.com/31917400/41677116-598adbfe-74bf-11e8-97bc-b32323bbf4a6.jpg" />
 
 ### 2. Regularization Method
-**choose L1**: In case we want "Sparce vector"(the smaller weights tend to go to **'Zero'**), and if we want to reduce the No.of weights and end up with a small set....
+**choose L1**: 
+ - In case we want "Sparce vector"(the smaller weights tend to go to **'Zero'**), and if we want to reduce the No.of weights and end up with a small set....
  - Sometimes we have a problem with hundreds of features, and **L1** helps us select which features are important.**It will turn the rest into zeros**.
  
-**choose L2**: If we want to maintain all the weights homogeneously small....and want smaller Error..
+**choose L2**: 
+ - If we want to maintain all the weights homogeneously small....and want smaller Error..
  - This normally gives better results for training models, so we people use the most. 
 <img src="https://user-images.githubusercontent.com/31917400/41679187-4c1035b8-74c5-11e8-87be-68daca43e4fa.jpg" />
 
-
-
+### 3. Dropout Method
+When we train neural network, sometimes one part of the network has very large weights and it ends up dominating all the training. To solve this, we turn the dominating input off and let the rest train. More thoroughly, we go through the epochs, we randomly turn off some nodes(hey, you shall not pass through here). In that case, the other nodes have to pick up the slack and take more part in the training. On average, each node will get the same treatment.         
+<img src="https://user-images.githubusercontent.com/31917400/41683180-d338bc02-74d1-11e8-93cf-91952b38d947.jpg" />
 
 
 

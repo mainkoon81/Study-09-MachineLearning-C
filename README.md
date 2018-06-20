@@ -211,7 +211,7 @@ from keras.layers.core import Dense, Activation, Flatten
 
 # Building the model
 xor = Sequential()
-xor.add(Dense(8, input_dim=2))
+xor.add(Dense(32, input_dim=2))
 xor.add(Activation("sigmoid"))
 xor.add(Dense(2))
 xor.add(Activation("sigmoid"))

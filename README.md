@@ -242,6 +242,12 @@ The final prediction(matrix) tells the probability of each data point! The `xor.
 
 
 
+### Training Optimization
+there are so many things that can fail...
+ - poorly chosen architecture?
+ - noisy data?
+ - model-running time?
+<img src="https://user-images.githubusercontent.com/31917400/41677116-598adbfe-74bf-11e8-97bc-b32323bbf4a6.jpg" />
 
 
 

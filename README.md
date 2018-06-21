@@ -279,6 +279,9 @@ What "learning-rate" to use?
  - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
  
 ### 5. `Being stuck at Local Minima`: Random Restart Method
+<img src="https://user-images.githubusercontent.com/31917400/41715158-761e55d0-754a-11e8-9679-6d7eb3eefdda.jpg" />
+
+We start from a few different random places and do gradient descent from all of them. This increases the odds that we will get the **Global Minima**. 
 
 
 

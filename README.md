@@ -266,18 +266,20 @@ there are so many things that can fail...
 When we train neural network, sometimes one part of the network has very large weights and it ends up dominating all the training. To solve this, we turn the dominating input off and let the rest train. More thoroughly, we go through the epochs, we randomly turn off some nodes(hey, you shall not pass through here). In that case, the other nodes have to pick up the slack and take more part in the training. On average, each node will get the same treatment.         
 <img src="https://user-images.githubusercontent.com/31917400/41683180-d338bc02-74d1-11e8-93cf-91952b38d947.jpg" />
 
-### 4. `too small Gradient`: Other Activation Function
+### 4. `Vanishing Gradient`: Other Activation Functions
 > Problem of "Gradient-Descent": Local Minima & Vanishing Gradient
 <img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
 
-### 5. `too large Gradient`: 
 > Problem of wrong learning rate
 <img src="https://user-images.githubusercontent.com/31917400/41714131-406caaac-7547-11e8-80f9-cb7eef0e51ea.jpg" />
 
 What "learning-rate" to use? 
  - If it's too big, then we will take several huge single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
  - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
+ 
+### 5. `Being stuck at Local Minima`: Random Restart Method
+
 
 
 

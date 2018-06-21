@@ -266,24 +266,29 @@ there are so many things that can fail...
 When we train neural network, sometimes one part of the network has very large weights and it ends up dominating all the training. To solve this, we turn the dominating input off and let the rest train. More thoroughly, we go through the epochs, we randomly turn off some nodes(hey, you shall not pass through here). In that case, the other nodes have to pick up the slack and take more part in the training. On average, each node will get the same treatment.         
 <img src="https://user-images.githubusercontent.com/31917400/41683180-d338bc02-74d1-11e8-93cf-91952b38d947.jpg" />
 
-### 4. Other Activation Function
+### 4. `too small Gradient`: Other Activation Function
 > Problem of "Gradient-Descent": Local Minima & Vanishing Gradient
 <img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
 
-### 5. `Long running time`: Batch & Stochastic Gradient-Descent
+### 5. `too large Gradient`: 
+> Problem of wrong learning rate
+<img src="https://user-images.githubusercontent.com/31917400/41714131-406caaac-7547-11e8-80f9-cb7eef0e51ea.jpg" />
+
+What "learning-rate" to use? 
+ - If it's too big, then we will take several huge single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
+ - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
+
+
+
+### 6. `Long running time`: Batch & Stochastic Gradient-Descent
 > Problem of long running time
 <img src="https://user-images.githubusercontent.com/31917400/41688294-76fb9876-74e3-11e8-90ef-e279f67bea14.jpg" />
 
 Well...we don't need to plug in all our data every time we take a step. **We only use a bunch of random subsets of our data**. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.  
 
-### 6. `Wrong Learning Rate`: 
-> Problem of wrong learning rate
-<img src="https://user-images.githubusercontent.com/31917400/41714131-406caaac-7547-11e8-80f9-cb7eef0e51ea.jpg" />
 
-What "learning-rate" to use? 
- - If it's too big, then we will take several hugh single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
- - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
+
 
 
 

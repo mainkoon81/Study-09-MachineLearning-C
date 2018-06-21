@@ -242,7 +242,7 @@ The final prediction(matrix) tells the probability of each data point! The `xor.
 
 
 
-## [Training Optimization]
+## [Training Optimization] ##############################################
 there are so many things that can fail...
  - overfitting?
  - poorly chosen architecture?
@@ -268,7 +268,7 @@ http://ruder.io/optimizing-gradient-descent/index.html#rmsprop
 When we train neural network, sometimes one part of the network has very large weights and it ends up dominating all the training. To solve this, we turn the dominating input off and let the rest train. More thoroughly, we go through the epochs, we randomly turn off some nodes(hey, you shall not pass through here). In that case, the other nodes have to pick up the slack and take more part in the training. On average, each node will get the same treatment.         
 <img src="https://user-images.githubusercontent.com/31917400/41683180-d338bc02-74d1-11e8-93cf-91952b38d947.jpg" />
 
-### 4. `Vanishing Gradient`: Other Activation Functions
+### 4. `Vanishing Gradient`: Other Activation methods
 > Problem of "Gradient-Descent": Local Minima & Vanishing Gradient
 <img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
@@ -278,7 +278,8 @@ When we train neural network, sometimes one part of the network has very large w
 
 What "learning-rate" to use? 
  - If it's too big, then we will take several huge single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
- - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
+ - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.
+ - **RMSProp** (RMS stands for Root Mean Squared Error) decreases the learning rate by dividing it by an exponentially decaying average of squared gradients. 
  
 ### 5. `Being stuck at Local Minima`: Random Restart Method or Momentum Method
 <img src="https://user-images.githubusercontent.com/31917400/41715158-761e55d0-754a-11e8-9679-6d7eb3eefdda.jpg" />
@@ -289,14 +290,25 @@ We start from a few different random places and do gradient descent from all of 
 The idea is that you walk a bit fast with momentum and determination in a way that if you get stuck at local minima, you power through and get over the hump to look for a lower minima. Momentum is a constant beta b/w 0 and 1 and the beta attaches to the steps. For example,
  - the previous step gets multiplied by '1', then one before*beta-squared, then one before*beta-cubed...
  - Once we get the **Global Minima**, it will be still pushing us but not as much.  
+ - **Adam** (Adaptive Moment Estimation) uses a more complicated exponential decay that consists of not just considering the average (first moment), but also the variance (second moment) of the previous steps.
 
-### 6. `Long running time`: Batch & Stochastic Gradient-Descent
+### 6. `Long running time`: Batch & Stochastic-Gradient-Descent(SGD)
 > Problem of long running time
 <img src="https://user-images.githubusercontent.com/31917400/41688294-76fb9876-74e3-11e8-90ef-e279f67bea14.jpg" />
 
-Well...we don't need to plug in all our data every time we take a step. **We only use a bunch of random subsets of our data**. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.  
+Well...we don't need to plug in all our data every time we take a step. **We only use a bunch of random subsets of our data**. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.
+ - [Parameters for SGD]: 
+   - Learning rate
+   - Momentum (This takes the weighted average of the previous steps, in order to get a bit of momentum and go over bumps, as a way to not get stuck in local minima).
+   - Nesterov Momentum (This slows down the gradient when it's close to the solution)
 
-
+--------------------------------------------------------------------------------------
+## Another way to deal with non-linear data
+> A piecewise Linear Function and Neural Network 
+ - What if we don't need the neural network for classification? At the end of the network, if we go with 'ReLU' which will return any numbers...It's a regression !!! (Just by changing the final activation function!!) Those values are weighted SUM of the outputs of the previous layer.  
+ - In order to train this network, we'd use a **different Error-Function** for calculationg the directions: 
+   - the mean-squared error (the AVG of the square of the difference b/w the labels and the predictions)
+<img src="https://user-images.githubusercontent.com/31917400/41728743-6e6d1dce-756f-11e8-87bf-e02310a4edd0.jpg" />
 
 
 

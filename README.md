@@ -278,13 +278,15 @@ What "learning-rate" to use?
  - If it's too big, then we will take several huge single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
  - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
  
-### 5. `Being stuck at Local Minima`: Random Restart Method
+### 5. `Being stuck at Local Minima`: Random Restart Method or Momentum Method
 <img src="https://user-images.githubusercontent.com/31917400/41715158-761e55d0-754a-11e8-9679-6d7eb3eefdda.jpg" />
 
-We start from a few different random places and do gradient descent from all of them. This increases the odds that we will get the **Global Minima**. 
+We start from a few different random places and do gradient descent from all of them. This increases the odds that we will get the **Global Minima**.
+<img src="https://user-images.githubusercontent.com/31917400/41716244-b9e26862-754d-11e8-8515-ee0b7466c936.jpg" />
 
-
-
+The idea is that you walk a bit fast with momentum and determination in a way that if you get stuck at local minima, you power through and get over the hump to look for a lower minima. Momentum is a constant beta b/w 0 and 1 and the beta attaches to the steps. For example,
+ - the previous step gets multiplied by '1', then one before*beta-squared, then one before*beta-cubed...
+ - Once we get the **Global Minima**, it will be still pushing us but not as much.  
 
 ### 6. `Long running time`: Batch & Stochastic Gradient-Descent
 > Problem of long running time

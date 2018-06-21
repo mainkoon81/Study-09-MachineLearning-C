@@ -1,5 +1,6 @@
 # Study-09-MachineLearning-C-[Deep Learning]
 DeepLearning Intro
+http://jalammar.github.io/visual-interactive-guide-basics-neural-networks/
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ## What if the data is not linearly separable ?

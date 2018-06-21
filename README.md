@@ -277,10 +277,13 @@ When we train neural network, sometimes one part of the network has very large w
 
 Well...we don't need to plug in all our data every time we take a step. **We only use a bunch of random subsets of our data**. It would not be the best estimate of the gradient but it's quick and because of its iteration, the accuracy is also great. This is where "Stochastic Gradient Descent" comes into play. Since we still need to use all data, we split the data into several batches. In practice, it's much better to take a bunch of slightly inaccurate steps than to take one good one.  
 
-### 6. 
+### 6. `Wrong Learning Rate`: 
+> Problem of wrong learning rate
+<img src="https://user-images.githubusercontent.com/31917400/41714131-406caaac-7547-11e8-80f9-cb7eef0e51ea.jpg" />
 
-
-
+What "learning-rate" to use? 
+ - If it's too big, then we will take several hugh single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
+ - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.   
 
 
 

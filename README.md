@@ -268,7 +268,7 @@ When we train neural network, sometimes one part of the network has very large w
 
 ### 4. `Vanishing Gradient`: Other Activation Function
 > Problem of "Gradient-Descent": Local Minima & Vanishing Gradient
-<img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/54962160-c0fdfd80-4f5b-11e9-9f0a-a15b8998b564.jpg" />
 
 > Solution: H-Tangent? ReLU?
 <img src="https://user-images.githubusercontent.com/31917400/54962037-256c8d00-4f5b-11e9-9ae8-6fdb0da221b5.jpg" />

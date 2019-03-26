@@ -287,21 +287,25 @@ When we train neural network, sometimes one part of the network has very large w
 > Solution: H-Tangent? ReLU?
 <img src="https://user-images.githubusercontent.com/31917400/54962037-256c8d00-4f5b-11e9-9ae8-6fdb0da221b5.jpg" />
 
+### 5. `wrong learning rate`: Optimizers
 > Problem of wrong learning rate
 <img src="https://user-images.githubusercontent.com/31917400/41714131-406caaac-7547-11e8-80f9-cb7eef0e51ea.jpg" />
 
 What "learning-rate" to use? 
  - If it's too big, then we will take several huge single steps, which could be fast at the beginning, but we may miss the **minima** and keep going. This is chaotic.
  - If it's too small, then we will have steady steps and a better chance of arriving to our local **minima**, which makes our model slow, but a good-rule-of-thumb is that if your model isn't working, decrease the learning-rate.
- - **RMSProp** (RMS stands for Root Mean Squared Error) decreases the learning rate by dividing it by an exponentially decaying average of squared gradients. 
+ - Learning Rate optimizers
+   - **RMSProp** (RMS stands for Root Mean Squared Error): It decreases the learning rate by dividing it by an exponentially decaying average of squared gradients.
+   - **AdaGrad**:
+   - **Adam**: the most popular. it builds on RMSprop and adds `momentum`!
  
-### 5. `Being stuck at Local Minima`: Random Restart Method or Momentum Method
+### 5. `Being stuck at Local Minima`: Random Restart or Momentum ?
 <img src="https://user-images.githubusercontent.com/31917400/41715158-761e55d0-754a-11e8-9679-6d7eb3eefdda.jpg" />
 
 We start from a few different random places and do gradient descent from all of them. This increases the odds that we will get the **Global Minima**.
 <img src="https://user-images.githubusercontent.com/31917400/41716244-b9e26862-754d-11e8-8515-ee0b7466c936.jpg" />
 
-The idea is that you walk a bit fast with momentum and determination in a way that if you get stuck at local minima, you power through and get over the hump to look for a lower minima. Momentum is a constant beta b/w 0 and 1 and the beta attaches to the steps. For example,
+The idea is that you walk a bit fast with momentum and determination in a way that if you get stuck at local minima, you power through and get over the hump to look for a lower minima. **Momentum** is a constant beta b/w `0 and 1` and the beta attaches to the steps. For example,
  - the previous step gets multiplied by '1', then one before*beta-squared, then one before*beta-cubed...
  - Once we get the **Global Minima**, it will be still pushing us but not as much.  
  - **Adam** (Adaptive Moment Estimation) uses a more complicated exponential decay that consists of not just considering the average (first moment), but also the variance (second moment) of the previous steps.

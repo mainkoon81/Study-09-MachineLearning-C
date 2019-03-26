@@ -266,12 +266,12 @@ http://ruder.io/optimizing-gradient-descent/index.html#rmsprop
 When we train neural network, sometimes one part of the network has very large weights and it ends up dominating all the training. To solve this, we turn the dominating input off and let the rest train. More thoroughly, we go through the epochs, we randomly turn off some nodes(hey, you shall not pass through here). In that case, the other nodes have to pick up the slack and take more part in the training. On average, each node will get the same treatment.         
 <img src="https://user-images.githubusercontent.com/31917400/41683180-d338bc02-74d1-11e8-93cf-91952b38d947.jpg" />
 
-### 4. `Vanishing Gradient`: Other Activation methods
+### 4. `Vanishing Gradient`: Other Activation Function
 > Problem of "Gradient-Descent": Local Minima & Vanishing Gradient
 <img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
 
-> Solution: 
-<img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
+> Solution: H-Tangent? ReLU?
+<img src="https://user-images.githubusercontent.com/31917400/54962037-256c8d00-4f5b-11e9-9ae8-6fdb0da221b5.jpg" />
 
 > Problem of wrong learning rate
 <img src="https://user-images.githubusercontent.com/31917400/41714131-406caaac-7547-11e8-80f9-cb7eef0e51ea.jpg" />

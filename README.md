@@ -45,7 +45,7 @@ What parameters(W,b) should they have on the edges(x1, x2) in order to model our
  - Error-Function(How badly each point is being classified? How far from the line?)
 <img src="https://user-images.githubusercontent.com/31917400/41541969-af95ec10-730b-11e8-9eda-194d5e58301a.jpg" />
 
-### 2.Backpropagation
+### 2.Backpropagation (How to update the model parameters?)
  - 1. Doing a feedforward operation
  - 2. Comparing the **output** of the model with the **desired output**.
  - 3. Calculating the error.

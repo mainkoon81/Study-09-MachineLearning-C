@@ -80,7 +80,8 @@ from keras.layers.core import Dense, Activation
 model = Sequential()
 ```
  - **model**: The `keras.models.Sequential` class is a wrapper for the neural network model that treats the network as a **sequence of layers**. 
-   - It implements the Keras model interface with common methods like `.compile()`, `.fit()`, `.evaluate()` and `.predict_proba()` that are used to train and run the model. 
+   - It implements the Keras model interface with common methods like 
+     - `.compile()`, `.fit()`, `.evaluate()` and `.predict_proba()` that are used to train and run the model. 
  - **layers**: The `keras.layers` class provides a common interface for a variety of standard neural network layers: 
    - fully connected layers
    - max pool layers
@@ -117,6 +118,18 @@ Once we have our model built, we need to **compile it** before it can be run. Co
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics = ["accuracy"])
 ```
 We'll specify the loss function to be `categorical_crossentropy` which can be used when there are only **two classes**, and specify `adam` as the optimizer (which is a reasonable default when speed is a priority). And finally, we can specify what **metrics** we want to evaluate the model with. Here we'll use `accuracy`. 
+
+ - Keras `loss=` :
+   - mean_squared_error, mean_absolute_error, mean_squared_logarithmic_error
+   - 
+   
+ - Keras `optimizer=`
+   - 
+   -
+ 
+ - Keras `metrics=`
+   - 
+   -
 
 The model is trained with the `fit()`. `vervose` is the message level(how much information we want displayed on the screen during training).
 ```

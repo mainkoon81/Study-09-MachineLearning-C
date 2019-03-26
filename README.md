@@ -304,10 +304,11 @@ Well...we don't need to plug in all our data every time we take a step. **We onl
 
 --------------------------------------------------------------------------------------
 ## Another way to deal with non-linear data
-> A piecewise Linear Function and Neural Network 
- - What if we don't need the neural network for classification? At the end of the network, if we go with `'ReLU'` which will return any numbers...It's a **regression** !!! (Just by changing the final activation function!!) Those values are weighted SUM of the outputs of the previous layer.  
+> A piecewise Linear Function and NN-Regression 
+ - What if, at the end of the network, we expect it to return any numbers...It's a **regression** !!! (Just by removing the final activation function!!) 
+ - **The final value would be a weighted SUM of the outputs of the previous layer**.  
  - In order to train this network, we'd use a **different Error-Function** for calculationg the directions: 
-   - the mean-squared error (the AVG of the square of the difference b/w the `real labels` and the `predictions`)
+   - **MSE** (the AVG of the square of the difference b/w the `real labels` and the `predictions`)
 <img src="https://user-images.githubusercontent.com/31917400/54963366-77fc7800-4f60-11e9-85fa-a5c1f9302107.jpg" />
 
 

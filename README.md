@@ -35,7 +35,8 @@ http://jalammar.github.io/visual-interactive-guide-basics-neural-networks/
 <img src="https://user-images.githubusercontent.com/31917400/41533886-49e55b1a-72f4-11e8-8313-12ec22f57952.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41535449-446184f6-72fa-11e8-9b38-95b8439c72fa.jpg" />
 
-### How do neural networks process the input to obtain an output? 
+### Fitting
+How do neural networks process the input to obtain an output? 
 ### 1.Feedforward
 What parameters(W,b) should they have on the edges(x1, x2) in order to model our data well? 
  - The perceptron(the simplist NN) here is defined by a linear model where W1 > W2.

@@ -269,6 +269,8 @@ When we train neural network, sometimes one part of the network has very large w
 ### 4. `Vanishing Gradient`: Other Activation methods
 > Problem of "Gradient-Descent": Local Minima & Vanishing Gradient
 <img src="https://user-images.githubusercontent.com/31917400/41685034-33da5b7e-74d7-11e8-8d56-d838187515bc.jpg" />
+
+> Solution: 
 <img src="https://user-images.githubusercontent.com/31917400/41687167-974b2880-74de-11e8-82ae-1767e837d09b.jpg" />
 
 > Problem of wrong learning rate

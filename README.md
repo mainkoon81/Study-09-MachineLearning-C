@@ -69,7 +69,7 @@ What parameters(W,b) should they have on the edges(x1, x2) in order to model our
 <img src="https://user-images.githubusercontent.com/31917400/41565629-73289c8e-734f-11e8-8a7c-28ab563b0141.jpg" />
 
  - Example
-<img src="https://user-images.githubusercontent.com/31917400/41567175-dc114618-7356-11e8-8454-d463b158f2f0.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/54988459-6477fe00-4fae-11e9-80a4-052631dcda5d.jpg" />
  
 ### Building a Neural Network in Keras
 ```

@@ -2,7 +2,9 @@
 DeepLearning Intro
 http://jalammar.github.io/visual-interactive-guide-basics-neural-networks/
 
-----------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+### `NN's each "NODE" is a linear model(classifier) with so many featuresssss whose weights(parameters) are updated by the optimization algorithm like a Gradient_Descent that minimizing the cost function("MSE" for regression form, "CrossEntropy" for logistic regression form), and this linear model(classifier) becomes the input of the activation function (step for discrete, sigmoid for continous) that returns a bunch of outcome of either classification/probability information per each feature datapoint`.  
+
 ## What if the data is not linearly separable ?
 <img src="https://user-images.githubusercontent.com/31917400/41435452-c25ebfae-7016-11e8-808c-8e740d608806.jpg" />
 
